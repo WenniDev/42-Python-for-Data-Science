@@ -4,7 +4,7 @@ import numpy as np
 
 def display_image(img):
     """Displays the image."""
-    plt.imshow(img)
+    plt.imshow(img, cmap="gray")
     plt.show()
 
 
@@ -41,5 +41,5 @@ def ft_blue(array) -> list:
 
 def ft_grey(array) -> list:
     """Sets the color of the image received to grey."""
-    img = np.dot(array, [0.299, 0.587, 0.114])
-    return np.stack((img, img, img), axis=2).astype(np.uint8)
+    img = np.array(array)
+    return img[:, :, 0:1]

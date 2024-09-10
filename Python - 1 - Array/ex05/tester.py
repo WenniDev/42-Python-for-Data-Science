@@ -5,7 +5,6 @@ from pimp_image import ft_red
 from pimp_image import ft_green
 from pimp_image import ft_blue
 from pimp_image import ft_grey
-from pimp_image import display_image
 
 
 array = ft_load("landscape.jpg")
@@ -15,7 +14,5 @@ ft_red(array)
 ft_green(array)
 ft_blue(array)
 ft_grey(array)
-
-display_image(ft_grey(array))
 
 print(ft_invert.__doc__)

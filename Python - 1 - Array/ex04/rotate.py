@@ -5,7 +5,7 @@ import numpy as np
 
 def display_image(img):
     """Displays the image."""
-    plt.imshow(img)
+    plt.imshow(img, cmap="gray")
     plt.show()
 
 
@@ -26,8 +26,8 @@ def transpose_2d_list(matrix):
 
 def main():
     img = ft_load("./animal.jpeg")
-    img = set_grayscale(img)
     img = zoom_image_by(img, (400, 150), (400, 400))
+    img = set_grayscale(img)
 
     print(f"The shape of the image is: {img.shape}")
     print(img)

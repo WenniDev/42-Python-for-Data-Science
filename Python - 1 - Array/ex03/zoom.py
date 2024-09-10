@@ -8,11 +8,13 @@ sys.tracebacklimit = 0
 
 def set_grayscale(img):
     """Sets the image to grayscale."""
+
     return img[:, :, 0:1]
 
 
 def zoom_image_by(img, begin=(0, 0), size=(400, 400)):
     """Zooms the image by a given percentage."""
+
     return img[begin[1]:size[1] + begin[1], begin[0]:size[0] + begin[0]]
 
 
@@ -29,6 +31,8 @@ def main():
 
     plt.imshow(img, cmap="gray")
     plt.show()
+
+    return 0
 
 
 if (__name__ == "__main__"):
